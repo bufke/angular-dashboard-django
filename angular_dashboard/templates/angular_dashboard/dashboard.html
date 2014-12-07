@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="{% static 'bower_components/malhar-angular-dashboard/dist/angular-ui-dashboard.css' %}">
+    <script type="text/javascript">
+        var CSRF_TOKEN = '{{ csrf_token|escapejs }}'
+    </script>
+    <script src="{% static 'bower_components/jquery/jquery.js' %}"></script>
+    <script src="{% static 'bower_components/lodash/dist/lodash.js' %}"></script>
+    <script src="{% static 'bower_components/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'bower_components/angular/angular.min.js' %}"></script>
+    <script src="{% static 'bower_components/angular-ui-sortable/sortable.js' %}"></script>
+    <script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap.min.js' %}"></script>
+    <script src="{% static 'bower_components/malhar-angular-dashboard/dist/angular-ui-dashboard.js' %}"></script>
+    <script src="{% static 'angular_dashboard/app.js' %}"></script>
+</head>
+
+<body ng-app="app" ng-controller="dashboardCtrl">
+
+    <div dashboard="dashboardOptions"></div>
+
+
+</body>
+</html>

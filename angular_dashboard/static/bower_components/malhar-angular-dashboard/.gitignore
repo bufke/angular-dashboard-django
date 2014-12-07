@@ -1,0 +1,7 @@
+node_modules
+bower_components
+.idea
+.DS_Store
+/template/dashboard.js
+/coverage
+/demo_dist
